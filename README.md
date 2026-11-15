@@ -1,4 +1,4 @@
-# Food Store — TPI Programación 3 (UTN)
+# Food Store — TPI Programación 4 (UTN)
 
 Sistema de pedidos online para una tienda de comida.
 Backend **FastAPI + SQLModel** (arquitectura por capas con Unit of Work) y frontend **React + TypeScript**.
@@ -61,7 +61,7 @@ Crea las tablas y carga 4 categorías, 12 productos y el usuario administrador:
 
 | Usuario | Contraseña | Rol |
 |---|---|---|
-| `admin` | `Admin1234!` | ADMIN |
+| `admin` | `Admin1234!` | `admin` |
 
 Se puede ejecutar varias veces sin duplicar datos. **Cambiar la contraseña fuera de desarrollo.**
 
@@ -92,7 +92,7 @@ App en <http://localhost:5173>. Build de producción: `pnpm build`.
 ## Funcionalidades
 
 - Registro/login con JWT en cookie **HttpOnly** (el token nunca queda en `localStorage`).
-- Roles `CLIENT` y `ADMIN`; rutas protegidas en frontend y backend (401/403).
+- Roles `user` (cliente) y `admin`; rutas protegidas en frontend y backend (401/403).
 - Catálogo con búsqueda, filtro por categoría y paginación del lado del servidor.
 - Carrito persistente (Zustand) y checkout con forma de pago y dirección.
 - Creación de pedido **transaccional**: valida stock, lo descuenta y copia nombre/precio en cada línea (RN-01..RN-06).
